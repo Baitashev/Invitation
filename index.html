@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="theme-color" content="#160c18" />
+  <title>У меня к тебе один вопрос 💌</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="background" aria-hidden="true">
+    <div class="bg-photo bg-assets/photo-1.jpg"></div>
+    <div class="bg-photo bg-photo-2"></div>
+    <div class="bg-photo bg-photo-3"></div>
+    <div class="overlay"></div>
+    <div class="grain"></div>
+  </div>
+
+  <div class="floating-hearts" id="floatingHearts" aria-hidden="true"></div>
+
+  <button class="music-button" id="musicButton" type="button" aria-label="Включить или выключить музыку">
+    <span class="music-icon">♫</span>
+    <span class="music-label">Музыка</span>
+  </button>
+
+  <main class="page-shell">
+    <section class="screen question-screen is-active" id="questionScreen" aria-labelledby="mainQuestion">
+      <div class="glass-card question-card">
+        <div class="mini-heart">♥</div>
+        <p class="eyebrow">У меня к тебе очень важный вопрос</p>
+        <h1 id="mainQuestion">Ты пойдёшь со мной на свидание?</h1>
+        <p class="subtitle">Я уже придумал один маленький вечер только для нас двоих.</p>
+
+        <div class="answer-zone" id="answerZone">
+          <button class="btn btn-yes" id="yesButton" type="button">Конечно 💗</button>
+          <button class="btn btn-no" id="noButton" type="button">Нет</button>
+        </div>
+
+        <p class="hint" id="hintText">P.S. У второй кнопки сегодня сложный характер 😌</p>
+      </div>
+    </section>
+
+    <section class="screen invite-screen" id="inviteScreen" aria-labelledby="inviteTitle">
+      <article class="invitation-card">
+        <div class="invite-topline">
+          <span>PRIVATE INVITATION</span>
+          <span>♥</span>
+        </div>
+
+        <div class="invite-content">
+          <p class="invite-kicker">Официально подтверждено</p>
+          <h2 id="inviteTitle"><span id="girlName">Любимая</span>, ты приглашена на свидание</h2>
+          <p class="invite-message" id="inviteMessage">
+            На вечер, где никуда не нужно спешить. Только ты, я и немного магии.
+          </p>
+
+          <div class="details-grid">
+            <div class="detail-item">
+              <span class="detail-icon">◷</span>
+              <div>
+                <span class="detail-label">Когда</span>
+                <strong id="dateTime">26 августа 2026 · 16:00</strong>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <span class="detail-icon">⌖</span>
+              <div>
+                <span class="detail-label">Где</span>
+                <strong id="place">Bellagio на Эркиндик 💌</strong>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <span class="detail-icon">♡</span>
+              <div>
+                <span class="detail-label">Кто будет ждать</span>
+                <strong id="waitingPerson">Твой Любимый</strong>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <span class="detail-icon">✦</span>
+              <div>
+                <span class="detail-label">Дресс-код</span>
+                <strong id="dressCode">Ты всегда прекрасно выглядишь!</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="love-note">
+            <span>Для тебя:</span>
+            <p id="loveNote">Просто будь готова. Всё остальное я беру на себя ❤️</p>
+          </div>
+
+          <div class="signature">
+            <span>С любовью,</span>
+            <strong id="signatureName">Бекназар</strong>
+          </div>
+        </div>
+
+        <div class="invite-footer">
+          <span id="ticketCode">DATE • 160826</span>
+          <span>ONE SPECIAL GIRL ONLY - ONLY FOR SALIMA SARBANOVA</span>
+        </div>
+      </article>
+
+      <button class="back-button" id="backButton" type="button">← Вернуться</button>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <audio id="backgroundMusic" loop preload="auto">
+    <source src="assets/music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
